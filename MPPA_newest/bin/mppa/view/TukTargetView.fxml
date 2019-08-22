@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="149.0" prefWidth="310.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mppa.view.TukTargetController">
+   <children>
+      <GridPane prefHeight="115.0" prefWidth="300.0" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="easting" onAction="#onEnter" promptText="Easting" GridPane.columnIndex="1" />
+            <TextField fx:id="northing" onAction="#onEnter" promptText="Northing" GridPane.columnIndex="2" />
+            <TextField fx:id="directionAngle" onAction="#onEnter" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="ÜLEKANDEPUNKT" />
+            <Label text="SUUND" GridPane.rowIndex="1" />
+            <Label text="KORREKTUUR" GridPane.rowIndex="2" />
+            <TextField fx:id="vas" onAction="#onEnter" prefHeight="25.0" prefWidth="59.0" promptText="VAS" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="vah" onAction="#onEnter" prefHeight="25.0" prefWidth="45.0" promptText="VÄH" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="par" onAction="#onEnter" prefHeight="25.0" prefWidth="45.0" promptText="PAR" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="sur" onAction="#onEnter" prefHeight="25.0" prefWidth="45.0" promptText="SUR" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Maa-ala Suund:" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="17.0" />
+               </GridPane.margin>
+            </Label>
+            <CheckBox fx:id="regionCheck" mnemonicParsing="false" onAction="#handleCheckAction" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="regionAngle" disable="true" onAction="#onEnter" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Button layoutX="97.0" layoutY="103.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0" prefWidth="100.0" text="Salvesta" AnchorPane.bottomAnchor="2.0" />
+      <Button layoutX="206.0" layoutY="103.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="103.0" text="Katkesta" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="5.0" />
+   </children>
+</AnchorPane>

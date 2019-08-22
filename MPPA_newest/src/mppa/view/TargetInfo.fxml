@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mppa.view.TargetInfoController">
+   <children>
+      <BorderPane prefHeight="250.0" prefWidth="350.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <left>
+            <ImageView fx:id="imageView" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+         </left>
+         <top>
+            <Label fx:id="header" text="SM" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </top>
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#handleOk" text="Sulge" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="loc">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="deltaK">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="deltaS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="deltaV">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lastCorrection">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

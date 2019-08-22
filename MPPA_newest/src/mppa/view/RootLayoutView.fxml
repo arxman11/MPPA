@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mppa.view.PositionController">
+   <children>
+      <AnchorPane layoutX="150.0" layoutY="-86.0" prefHeight="800.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar layoutX="-1.0" layoutY="-12.0" prefHeight="25.0" prefWidth="1006.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="0.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Fail">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleExitProgram" text="Sulge" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Seaded" />
+                <Menu mnemonicParsing="false" text="Abi">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Info" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ToolBar layoutX="-1.0" layoutY="50.0" prefHeight="35.0" prefWidth="1006.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="25.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#handlePositionEdit" text="POSITSIOON" />
+                  <Separator orientation="VERTICAL" prefWidth="40.0" />
+                  <Button mnemonicParsing="false" onAction="#handleNewTarget" text="RUUT" />
+                  <Button mnemonicParsing="false" onAction="#handleNewPolarTarget" text="POL" />
+                  <Button mnemonicParsing="false" onAction="#handleNewTukTarget" text="TÜK" />
+                  <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="40.0" />
+                  <Button mnemonicParsing="false" onAction="#handleLimitersEdit" text="PIIRAJAD" />
+                  <Button mnemonicParsing="false" onAction="#handleTempEdit" text="TEMP" />
+                  <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="40.0" />
+                  <Button mnemonicParsing="false" onAction="#handleAmmoEdit" text="MOON" />
+                  <Label fx:id="ammoLabel" />
+                  <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="40.0" />
+                  <Button mnemonicParsing="false" onAction="#handleSaveData" text="SALVESTA" />
+                  <Button mnemonicParsing="false" onAction="#handleLoadData" text="LAE LAUD" />
+              </items>
+            </ToolBar>
+            <ToolBar layoutX="-1.0" layoutY="66.0" prefHeight="27.0" prefWidth="1006.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="60.0">
+              <items>
+                  <Label text="TEMP:" />
+                  <Label fx:id="tempLabel" prefWidth="40.0" />
+                  <Separator orientation="VERTICAL" />
+                  <Label text="1: E" />
+                  <Label fx:id="firstEastingLabel" prefWidth="40.0" />
+                  <Label text="N" />
+                  <Label fx:id="firstNorthingLabel" prefWidth="40.0" />
+                  <Label text="PS:" />
+                  <Label fx:id="firstMainDirectionLabel" prefWidth="40.0" />
+                  <Label text="VS:" />
+                  <Label fx:id="firstBackUpDirectionLabel" prefWidth="40.0" />
+                  <Separator orientation="VERTICAL" />
+                  <Label text="2: E" />
+                  <Label fx:id="secondEastingLabel" prefWidth="40.0" />
+                  <Label text="N" />
+                  <Label fx:id="secondNorthingLabel" prefWidth="40.0" />
+                  <Label text="PS:" />
+                  <Label fx:id="secondMainDirectionLabel" prefWidth="40.0" />
+                  <Label text="VS:" />
+                  <Label fx:id="secondBackUpDirectionLabel" prefWidth="40.0" />
+                  <Separator orientation="VERTICAL" />
+                  <Label text="3: E" />
+                  <Label fx:id="thirdEastingLabel" prefWidth="40.0" />
+                  <Label text="N" />
+                  <Label fx:id="thirdNorthingLabel" prefWidth="40.0" />
+                  <Label text="PS:" />
+                  <Label fx:id="thirdMainDirectionLabel" prefWidth="40.0" />
+                  <Label text="VS:" />
+                  <Label fx:id="thirdBackUpDirectionLabel" prefWidth="40.0" />
+              </items>
+            </ToolBar>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

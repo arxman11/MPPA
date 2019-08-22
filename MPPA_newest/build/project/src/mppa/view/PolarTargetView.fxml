@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.71" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mppa.view.PolarTargetController">
+   <children>
+      <GridPane prefHeight="150.0" prefWidth="300.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="easting" onAction="#onEnter" promptText="Easting" GridPane.columnIndex="1" />
+            <TextField fx:id="northing" onAction="#onEnter" promptText="Northing" GridPane.columnIndex="2" />
+            <TextField fx:id="FOdirectionAngle" onAction="#onEnter" prefHeight="25.0" prefWidth="147.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="distance" onAction="#onEnter" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0" prefWidth="103.0" text="Salvesta" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="101.0" text="Katkesta" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="98.0" text="TJ ASUKOHT:" />
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="98.0" text="VAATLUSSUUND" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="98.0" text="KAUGUS" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

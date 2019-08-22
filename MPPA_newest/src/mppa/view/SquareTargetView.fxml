@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mppa.view.SquareTargetController">
+   <children>
+      <GridPane prefHeight="70.0" prefWidth="350.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="10.0" prefWidth="54.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="49.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="8.0" prefWidth="11.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="57.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="14.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="59.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="43.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="63.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="targetName" onAction="#onEnter" GridPane.columnIndex="1" />
+            <TextField fx:id="eastingField" onAction="#onEnter" prefHeight="25.0" prefWidth="58.0" GridPane.columnIndex="3" />
+            <TextField fx:id="northingField" onAction="#onEnter" prefHeight="25.0" prefWidth="58.0" GridPane.columnIndex="5" />
+            <TextField fx:id="directionAngleField" onAction="#onEnter" prefHeight="25.0" prefWidth="58.0" GridPane.columnIndex="7" />
+            <CheckBox fx:id="regionCheck" mnemonicParsing="false" onAction="#handleCheckAction" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextField fx:id="regionAngle" disable="true" onAction="#onEnter" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0" prefWidth="104.0" text="Salvesta" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="99.0" text="Katkesta" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="22.0" text="E:" GridPane.columnIndex="2" />
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="72.0" text="N:" GridPane.columnIndex="4" />
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="45.0" text="Vaatlus:" GridPane.columnIndex="6" />
+            <Label text="SM NIMI:" />
+            <Label prefHeight="17.0" prefWidth="60.0" text=" Maa-ala" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="60.0" text="Suund:" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

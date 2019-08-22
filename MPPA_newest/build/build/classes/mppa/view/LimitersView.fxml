@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mppa.view.LimitersController">
+   <children>
+      <Button layoutX="234.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleLimiterAdd" prefWidth="75.0" text="Lisa" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0" />
+      <Button layoutX="226.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleDeleteLimiter" prefWidth="75.0" text="Eemalda" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0" />
+      <Button layoutX="215.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleCancel" text="Katkesta" AnchorPane.rightAnchor="25.0" />
+      <Button layoutX="150.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleOk" text="Salvesta" AnchorPane.rightAnchor="100.0" />
+      <ListView fx:id="list" layoutX="14.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Label layoutX="211.0" layoutY="100.0" text="Minimaalselt 3 !" />
+   </children>
+</AnchorPane>
